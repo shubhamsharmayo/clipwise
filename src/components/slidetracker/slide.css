@@ -1,0 +1,32 @@
+.toggle{
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20vw;
+    position: relative;
+    left: 900px;
+    top: 60px;
+    gap: 20px;
+}
+.previous,.next{
+    width: 30px;
+    height: 30px;
+    background-color:#0291eb ;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+}
+.dots{
+    width: 12px;
+    height: 12px;
+    background-color: #9fcae6;
+    border-radius: 10px;
+}
+.background{
+    width: 12px;
+    height: 12px;
+    background-color: gray;
+    border-radius: 10px;
+    background-color:#0291eb ;
+}

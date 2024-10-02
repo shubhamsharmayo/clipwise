@@ -1,0 +1,365 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.container{
+  display: grid;
+  grid-template-rows: 0.68fr 1fr 0.6fr,1fr;
+  /* border: 1px solid rgb(0, 0, 0); */
+  
+}
+.boxes{
+  height: 100vh;
+  width: 100vw;
+  
+}
+
+.box2{
+  height: fit-content;
+}
+.box1{
+  position: relative;
+  
+  background: linear-gradient(500deg, #0291eb, #d8b2e0);
+  overflow: hidden; 
+ /* border: 1px solid black; */
+  z-index: 0;
+  
+}
+
+
+.box1::before {
+  content: '';
+      position: absolute;
+      left: 20%; /* Place the pink gradient on the left */
+      top: 50%;
+      transform: translate(-50%, -80%);
+      width: 700px;
+      height: 700px;
+      background: radial-gradient(circle, rgba(219, 98, 116, 0.8), rgba(255, 182, 193, 0) 60%);
+      z-index: 1;
+      opacity: 0.8;
+      
+}
+
+
+.backgroundcurve{
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  /* border: 2px solid black; */
+ position: absolute;
+ z-index: -100;
+ display: flex;
+ align-items: center;
+}
+/* .box1>nav{
+  border: 1px solid black;
+  width: 100vw;
+  height: 20%;
+  position: relative;
+  z-index: 55;
+} */
+.content{
+  /* border: 1px solid black; */
+  color: white;
+  width: 50%;
+  height: 50%;
+  padding-left: 33px;
+  margin-top: 60px;
+}
+.welcome{
+font-size: 30px;
+/* border: 1px solid black; */
+margin: 0;
+font-weight: 400;
+}
+.title{
+  font-size: 60px;
+  margin:0;
+  /* border: 1px solid black; */
+  padding: 0;
+  font-weight: 500;
+}
+
+.description{
+  margin-top: 30px;
+  width: 50%;
+  font-size: 13px;
+  color: black;
+}
+.btn{
+  display: flex;
+  margin-top: 50px;
+  gap: 20px;
+ 
+  align-items: center;
+}
+.shop{
+  cursor: pointer;
+  padding: 18px 30px 18px 30px;
+  width: 150px;
+  height: 50px;
+  border-radius: 10px;
+  border: none;
+  background: white;
+  color: #35acf7;
+  
+}
+.shop:hover{
+  background-color: rgb(235, 235, 235);
+}
+.btn>p{
+  color: black;
+  
+}
+
+.scroll{
+  
+  position: relative;
+  top: 100px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  width: 50vw;
+}
+.scroll>img{
+  cursor: pointer;
+}
+.maincard{
+  height: auto;
+  position: relative;
+  left: 112%;
+  bottom: 370px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.box2hidden{
+  background-color: rgb(255, 255, 255);
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.box2visible{
+  opacity: 1;
+  transform: translateY(0);
+}
+.product{
+  /* border: 1px solid black; */
+  font-size: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgba(49, 84, 109, 1);
+  font-weight: 700;
+  
+}
+.options{
+  margin-top: 20px;
+  padding-left:80px ;
+  display: flex;
+  gap: 30px;
+  font-size: 20px;
+  font-weight: 500;
+}
+.opt1,.opt2{
+  display: flex;
+  gap: 20px;
+}
+.select{
+  background: transparent;
+  width: 120px;
+  border-radius: 5px;
+  color: rgba(49, 84, 109, 1);
+  font-weight: 900;
+  border: none;
+  cursor: pointer;
+}
+.select:focus{
+  outline: none;
+}
+.opt1>label,.opt2>label{
+  color: rgb(143, 183, 211)
+}
+.select>option{
+  color: rgba(49, 84, 109, 1);
+  font-weight: 700;
+}
+.carding{
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  flex-wrap: wrap;
+  gap: 20px;
+  /* border: 1px solid black; */
+}
+.view{
+  display: flex;
+  justify-content: center;
+}
+.viewall{
+  width: 150px;
+  height: 50px;
+  background-color: transparent;
+  color:  rgb(0, 162, 255);
+  border: 3px solid  rgb(0, 162, 255);
+  border-radius: 20px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  cursor: pointer;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+.viewall:hover{
+  background-color: rgb(0, 162, 255);
+  color: white;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+.box3hidden{
+  height: fit-content;
+  background: linear-gradient(50deg, #0291eb, #d8b2e0);
+  /* border: 1px solid black; */
+  position: relative;
+  z-index: -21;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.box3visible{
+  height: fit-content;
+  background: linear-gradient(50deg, #0291eb, #d8b2e0);
+  /* border: 1px solid black; */
+  position: relative;
+  z-index: -21;
+  opacity: 1;
+  transform: translateY(0);
+}
+.curve{
+  width:100vw;
+  position: relative;
+  z-index: -20;
+}
+
+.outercircle{
+  /* border: 1px solid black; */
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  z-index: 1;
+  bottom: 160px;
+  left: 800px;
+  border-radius: 50%;
+  background: white;
+  box-shadow: 0px 4px 50px 0px rgba(120, 143, 156, 0.25);
+
+}
+.innercircle{
+  /* border: 1px solid black; */
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  z-index: 1;
+  /* bottom: 160px;
+  left: 800px; */
+  border-radius: 50%;
+  transform-origin: center;
+  transform: translate(33% ,33%);
+  box-shadow: 0px 4px 50px 0px rgba(120, 143, 156, 0.25);
+}
+.circleimg{
+  width: 130px;
+  position: relative;
+  left: 185px;
+  top: 160px;
+}
+.lowerboxcontent{
+  position: absolute;
+  z-index: 3;
+bottom: 190px;
+left: 100px;
+  /* border: 1px solid black; */
+  width: fit-content;
+  height: fit-content;
+  color: black;
+  text-align: right;
+  
+}
+.cont1{
+  font-size: 35px;
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  /* border: 1px solid black; */
+  
+}
+.cont2{
+  display: flex;
+  align-items: start;
+  font-size: 75px;
+  /* border: 1px solid black; */
+  position: relative;
+  bottom: 25px;
+  font-weight: 500;
+  /* padding-bottom: 30px; */
+}
+.price{
+  padding: 0px 30px 0 30px;
+  display: flex;
+  gap: 50px;
+  justify-content: end;
+  align-items: center;
+}
+.less{
+  text-decoration: line-through;
+  color: rgb(20, 158, 212);
+  font-size: 25px;
+}
+.more{
+  font-size: 70px;
+  color: rgb(190, 51, 0);
+  font-weight: 500;
+}
+.paradiv{
+  display: flex;
+  justify-content: end;
+}
+.para{
+  /* border: 1px solid black; */
+  color: black;
+  width: 400px;
+}
+.buy2{
+  position: relative;
+  
+    left: 0px;
+    top: 30px;
+    width: 150px;
+    height: 50px;
+    background-color: rgb(0, 162, 255);
+    color:  rgb(255, 255, 255);
+    border: 3px solid  rgb(0, 162, 255);
+    border-radius: 20px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    transition: background-color 0.5s ease, color 0.5s ease;
+    cursor: pointer;
+    
+}
+.box4{
+  height: 16vw;
+  background: rgba(10, 41, 77, 0.8);
+  
+}
